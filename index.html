@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <title>Number Guessing Game</title>
+</head>
+<style>
+.container .row{
+    text-align: center;
+}
+</style>
+<body>
+    <div class="container bg-dark text-white" >
+        <div class="row">
+            <div class="col-12"> <h4 class="gameName">Number Guessing Game</h4></div>
+        </div>
+        <div class="row bg-light" >
+            <div class=" col-lg-6 col-12 text-info mx-auto">
+              <h5 id="rools">Try and guess a random number between 1 and 10. You hav 3 attempts to guess the right number.</h5>
+            </div>
+               <form action="#" class="inputSection">
+                <div class="row text-dark d-block justify-content-center bg-none shadow w-sm-50 mx-auto">
+                    <div class="col-12">
+                        <h4 id="matchShow" class="mt-2 text-danger shadow"></h4>
+                        <h5 class="form-control-lavle pt-1 text-30">Enter A Guessing Number</h5>
+                    </div>
+                    <div id="input" class="col-lg-3 col-8 mx-auto pb-3">
+                        <input id="inNum" type="text" class="form-control btn btn-outline-dark">
+                    </div>
+                    <div id="guessResult">
+                        <div class="col-lg-2 col-8 mx-auto pb-2">
+                            <input id="submit" type="submit" class="btn btn-success btn-sm" placeholder="submit guess">
+                       </div>
+                       <div class="col-lg-5 col-12 mx-auto pb-2 text-danger">
+                           <p class="mb-0">Previous Guesses : <span id="previousGuess"></span></p>
+                           <p>Guesses Remaining : <span id="remainingGuess">3</span></p>
+                       </div>
+                    </div>
+                </div>
+               </form>
+        </div>
+    </div>
+    <script src="guessesEvent.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+</body>
+</html>
