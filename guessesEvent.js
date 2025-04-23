@@ -1,5 +1,5 @@
 let playGame = true;
-let rightNumber = parseInt(Math.random() * 10 + 1);
+let rightNumber = parseInt(Math.random() * 15 + 1);
 console.log(rightNumber);
 
 let guessInput = document.getElementById('inNum');
@@ -104,7 +104,7 @@ function newGameStart(btn) {
     btn.addEventListener('click', () => {
         previousGuesses = [];
         guessRemaining = 3;
-        rightNumber = parseInt(Math.random() * 10 + 1); // Reset random number too
+        rightNumber = parseInt(Math.random() * 15 + 1); // Reset random number too
         console.log('New number:', rightNumber); // Optional: helpful during development
         guessResult.style.visibility = 'visible';
         previousGuess.innerText = '';
