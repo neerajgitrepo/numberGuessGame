@@ -32,8 +32,8 @@ function checkNumber(number) {
     } else if (number < 1) {
         alert('Enter more than 0');
         inputClear();
-    } else if (number > 10) {
-        alert("Enter less than 11");
+    } else if (number > 15) {
+        alert("Enter less than 15");
         inputClear();
     } else {
         previousGuesses.push(number);
@@ -43,8 +43,9 @@ function checkNumber(number) {
 }
 
 function checkGuess(number) {
-    if (guessRemaining < 0) {
-        gameOver();
+    if (guessRemaining == 0) {
+        guessInfoF();
+        setTimeout(gameOver,3000);
     } else {
         if (number < rightNumber) {
             const message = `Your guess is too low`;
