@@ -43,18 +43,22 @@ function checkNumber(number) {
 }
 
 function checkGuess(number) {
-    if (guessRemaining == 0) {
-        guessInfoF();
-        setTimeout(gameOver,3000);
-    } else {
-        if (number < rightNumber) {
+    if (number === rightNumber) {
+        winner();
+    } 
+    else {
+        if (guessRemaining < 1) {
+            guessInput.style.display = 'none'
+            submitBtn.style.display = 'none'
+            guessInfoF();
+            setTimeout(gameOver,2000);
+        }
+        else if (number < rightNumber) {
             const message = `Your guess is too low`;
             guessMessage(message);
         } else if (number > rightNumber) {
             const message = `Your guess is too high`;
             guessMessage(message);
-        } else if (number === rightNumber) {
-            winner();
         }
         inputClear();
     }
@@ -109,6 +113,8 @@ function newGameStart(btn) {
         console.log('New number:', rightNumber); // Optional: helpful during development
         guessResult.style.visibility = 'visible';
         previousGuess.innerText = '';
+        guessInput.style.display = ''
+            submitBtn.style.display = ''
         remainingGuess.innerText = guessRemaining;
         matchShow.innerText = '';
         btn.remove();
